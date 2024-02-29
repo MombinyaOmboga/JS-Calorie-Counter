@@ -54,11 +54,44 @@ legend {
   margin-bottom: 8px;
 }
 
+legend{
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+/* Add this CSS to create card-like styling for fieldsets */
 fieldset {
-  border: 2px solid var(--dark-blue);
+  border: none;
   border-radius: 8px;
   margin-bottom: 20px;
   padding: 15px;
+}
+
+.card {
+  background-color: var(--light-grey);
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  margin-bottom: 20px;
+  color: #0a0a23;
+}
+
+/* Apply the card class to the container wrapping fieldsets */
+.container .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Add some margin to the input elements for better spacing */
+.container .card input,
+.container .card select {
+  margin-bottom: 15px;
+}
+
+input{
+  display: block;
+  width: 300px;
 }
 
 input,

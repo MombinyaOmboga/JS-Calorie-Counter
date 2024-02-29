@@ -1,6 +1,9 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" 
+                                    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" 
+                                    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calorie Counter</title>
@@ -10,28 +13,38 @@
         <h1>Calorie Counter</h1>
         <div class="container">
             <form action="" id="calorie-counter">
-                <label for="budget">Budget</label>
+                <label for="budget">Budget </label>
                 <input type="number" min="0" id="budget" placeholder="Daily calorie budget" required>
-                <fieldset id="breakfast">
-                    <legend>Breakfast</legend>
-                    <div class="input-container"></div>
-                </fieldset>
-                <fieldset id="lunch">
-                    <legend>Lunch</legend>
-                    <div class="input-container"></div>
-                </fieldset>
-                <fieldset id="dinner">
-                    <legend>Dinner</legend>
-                    <div class="input-container"></div>
-                </fieldset>
-                <fieldset id="snack">
-                    <legend>Snack</legend>
-                    <div class="input-container"></div>
-                </fieldset>
-                <fieldset id="exercise">
-                    <legend>Exercise</legend>
-                    <div class="input-container"></div>
-                </fieldset>
+                <div class="card">
+                    <fieldset id="breakfast">
+                        <legend>Breakfast <i class="fa-solid fa-mug-hot"></i></legend>
+                        <div class="input-container"></div>
+                    </fieldset>
+                </div>
+                <div class="card">
+                    <fieldset id="lunch">
+                        <legend>Lunch <i class="fa-solid fa-drumstick-bite"></i></legend>
+                        <div class="input-container"></div>
+                    </fieldset>
+                </div>
+                <div class="card">
+                    <fieldset id="dinner">
+                        <legend>Dinner <i class="fa-solid fa-utensils"></i></legend>
+                        <div class="input-container"></div>
+                    </fieldset>
+                </div>
+                <div class="card">
+                    <fieldset id="snack">
+                        <legend>Snack <i class="fa-solid fa-cookie-bite"></i></legend>
+                        <div class="input-container"></div>
+                    </fieldset>
+                </div>
+                <div class="card">
+                    <fieldset id="exercise">
+                        <legend>Exercise <i class="fa-solid fa-dumbbell"></i></legend>
+                        <div class="input-container"></div>
+                    </fieldset>
+                </div>
                 <div class="controls">
                     <span>
                         <label for="entry-dropdown">Add food or exercise</label>
