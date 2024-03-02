@@ -55,7 +55,17 @@ function calculateCalories(e) {
 
   const consumedCalories = breakfastCalories + lunchCalories + dinnerCalories + snacksCalories;
   const remainingCalories = budgetCalories - consumedCalories + exerciseCalories;
+  const surplusOrDeficit = remainingCalories < 0 ? 'Surplus' : 'Deficit';
+  output.innerHTML = `
+  <span class="${surplusOrDeficit.toLowerCase()}">${Math.abs(remainingCalories)} Calorie ${surplusOrDeficit}</span>
+  <hr>
+  <p>${budgetCalories} Calories Budgeted</p>
+  <p>${consumedCalories} Calories consumed</p>
+  <p>${exerciseCalories}  Calories burned</p>
 
+  `;
+
+  output.classList.remove('hide')
 }
 
 function getCaloriesFromInputs(list) {
@@ -75,4 +85,9 @@ function getCaloriesFromInputs(list) {
   return calories;
 }
 
+function clearForm(){
+  const inputContainers =  document.querySelectorAll('.input-container');
+}
+
 addEntryButton.addEventListener("click", addEntry);
+calorieCounter.addEventListener("submit", calculateCalories)
